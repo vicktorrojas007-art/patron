@@ -17,11 +17,11 @@ form.addEventListener("submit", async (e) => {
   const registro = input.value.trim();
   result.innerHTML = "";
 
-  if (!/^\d{2,5}$/.test(registro)) {
-    setError("Escribe entre 2 y 5 dígitos.");
-    input.focus();
-    return;
-  }
+  //if (!/^\d{2,5}$/.test(registro)) {
+   // setError("Escribe entre 2 y 5 dígitos.");
+   // input.focus();
+    //return;
+  //}
   setError("");
   btn.disabled = true;
   btn.textContent = "Buscando…";
