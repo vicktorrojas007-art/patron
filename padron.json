@@ -1,0 +1,4 @@
+[
+  { "registro": "100000001", "nombre": "Persona de Ejemplo Uno", "mesa": "12", "recinto": "Edificio Central", "aula": "204" },
+  { "registro": "100000002", "nombre": "Persona de Ejemplo Dos", "mesa": "07", "recinto": "Facultad de Ciencias", "aula": "Aula Magna" }
+]

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consulta tu lugar de votación</title>
+  <meta name="description" content="Ingresa tu número de registro y verifica tu mesa, recinto y aula de votación.">
+  <meta name="theme-color" content="#0d5c2b">
+  <meta property="og:title" content="Consulta tu lugar de votación">
+  <meta property="og:description" content="Ingresa tu número de registro y verifica tu mesa, recinto y aula.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="intro">
+      <p class="org">Nombre de tu organización · Elecciones 2026</p>
+      <h1>¿Dónde te toca votar?</h1>
+      <p class="lead">Escribe tu número de registro y te mostramos tu mesa, recinto y aula.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="buscar">
+      <form id="form" novalidate>
+        <label id="buscar" for="registro">Número de registro</label>
+        <div class="row">
+          <input id="registro" name="registro" type="text" inputmode="numeric"
+                 autocomplete="off" placeholder="Ej. 219012345" maxlength="15" required>
+          <button type="submit" id="btn">Consultar</button>
+        </div>
+        <p class="hint" id="hint">Solo números, sin espacios.</p>
+      </form>
+
+      <div id="result" aria-live="polite"></div>
+    </section>
+
+    <footer>
+      <p>Si tus datos no aparecen o son incorrectos, comunícate con el comité electoral.</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
