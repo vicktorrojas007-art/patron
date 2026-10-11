@@ -17,8 +17,8 @@ form.addEventListener("submit", async (e) => {
   const registro = input.value.trim();
   result.innerHTML = "";
 
-  if (!/^\d{5,15}$/.test(registro)) {
-    setError("Escribe entre 5 y 15 dígitos.");
+  if (!/^\d{2,5}$/.test(registro)) {
+    setError("Escribe entre 2 y 5 dígitos.");
     input.focus();
     return;
   }
