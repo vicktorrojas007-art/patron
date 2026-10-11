@@ -11,7 +11,7 @@ const buscar = db.prepare(
 module.exports = (req, res) => {
   const registro = String(req.query.registro || "").trim();
 
-  if (!/^\d{5,15}$/.test(registro)) {
+  if (!/^[A-Za-z0-9-]{3,20}$/.test(registro))  {
     return res.status(400).json({ error: "Registro inválido" });
   }
 
