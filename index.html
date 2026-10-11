@@ -3,34 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Consulta tu lugar de votación</title>
+  <title>Consulta tu mesa de votación · Alianza FINE 2026-2028</title>
   <meta name="description" content="Ingresa tu número de registro y verifica tu mesa, recinto y aula de votación.">
-  <meta name="theme-color" content="#0d5c2b">
-  <meta property="og:title" content="Consulta tu lugar de votación">
+  <meta name="theme-color" content="#0b4a1f">
+  <meta property="og:title" content="Consulta tu mesa de votación · Alianza FINE">
   <meta property="og:description" content="Ingresa tu número de registro y verifica tu mesa, recinto y aula.">
-  <meta property="og:type" content="website">
+  <link rel="icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800;1,900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="page">
-    <section class="intro">
-      <p class="org">Nombre de tu organización · Elecciones 2026</p>
-      <h1>¿Dónde te toca votar?</h1>
-      <p class="lead">Escribe tu número de registro y te mostramos tu mesa, recinto y aula.</p>
-    </section>
+  <header class="hero">
+    <div class="hero-inner">
+      <img class="logo" src="logo.png" alt="Logo Alianza FINE 2026-2028" width="170" height="162">
+      <div class="hero-text">
+        <p class="kicker">Alianza FINE · 2026-2028</p>
+        <h1><span class="band">Consulta tu</span><span class="band alt">mesa de votación</span></h1>
+      </div>
+      <figure class="foto">
+        <img src="foto.jpg" alt="Estudiante de Alianza FINE sonriendo con camiseta amarilla" width="212" height="328">
+      </figure>
+    </div>
+  </header>
 
+  <main class="page">
     <section class="panel" aria-labelledby="buscar">
+      <p class="lead">Escribe tu número de registro y te mostramos tu <strong>mesa, recinto y aula</strong>.</p>
       <form id="form" novalidate>
         <label id="buscar" for="registro">Número de registro</label>
         <div class="row">
-          <input id="registro" name="registro" type="text" inputmode="numeric"
-                 autocomplete="off" placeholder="Ej. 219012345" maxlength="15" required>
+          <input id="registro" name="registro" type="text" inputmode="text"
+                 autocomplete="off" placeholder="Ej. 219012345" maxlength="20" required>
           <button type="submit" id="btn">Consultar</button>
         </div>
-        <p class="hint" id="hint">Solo números, sin espacios.</p>
+        <p class="hint" id="hint">Escribe tu registro sin espacios.</p>
       </form>
 
       <div id="result" aria-live="polite"></div>
@@ -38,6 +46,7 @@
 
     <footer>
       <p>Si tus datos no aparecen o son incorrectos, comunícate con el comité electoral.</p>
+      <p class="credit">Alianza FINE · 2026-2028</p>
     </footer>
   </main>
   <script src="app.js"></script>
